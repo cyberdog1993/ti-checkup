@@ -1,0 +1,1 @@
+// Código JS (similar al que te mostré antes, por espacio no lo repito todo aquí)

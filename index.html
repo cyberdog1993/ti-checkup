@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Autoevaluación de TI | Consultores-IT</title>
+  <meta name="description" content="Checklist de madurez del área de TI. Obtén tu puntaje al instante y recibe los resultados por email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>¿Qué tan madura está tu <span class="accent">área de TI</span>?</h1>
+      <p class="subtitle">Responde 10 preguntas, obtén tu puntaje en segundos y recibe recomendaciones accionables.</p>
+      <ul class="bullets">
+        <li>✔️ 100% gratis</li>
+        <li>✔️ Resultado inmediato</li>
+        <li>✔️ Informe por email</li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Datos de contacto</h2>
+      <form id="ti-form">
+        <div class="grid">
+          <label>Nombre y apellido*
+            <input type="text" name="name" required placeholder="Ej. Ana Gómez" />
+          </label>
+          <label>Correo electrónico*
+            <input type="email" name="email" required placeholder="ana@empresa.com" />
+          </label>
+          <label>Empresa*
+            <input type="text" name="company" required placeholder="Mi Empresa SAC" />
+          </label>
+          <label>Teléfono
+            <input type="tel" name="phone" placeholder="+51 9xx xxx xxx" />
+          </label>
+        </div>
+
+        <h2 style="margin-top:24px;">Autoevaluación (1 = muy deficiente, 5 = excelente)</h2>
+        <div id="questions" class="q-list"></div>
+
+        <div class="progress">
+          <div class="progress__label">
+            Puntaje: <span id="score">0</span> / 50 — <span id="band">—</span>
+          </div>
+          <div class="progress__bar">
+            <div class="progress__bar__fill" id="barFill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <label>Comentarios (opcional)
+          <textarea name="notes" rows="4" placeholder="Cuéntanos brevemente tus retos de TI..."></textarea>
+        </label>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          Acepto que se me envíe el resultado por email y la política de privacidad.
+        </label>
+
+        <button type="submit" class="btn">Obtener mi resultado</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="card result" id="resultCard" hidden>
+      <h2>Tu resultado</h2>
+      <p class="result__score"><strong id="finalScore">0</strong> / 50 — <span id="finalBand">—</span></p>
+      <p id="finalMessage"></p>
+      <p class="cta">Si tu resultado está en amarillo o rojo, <strong>contáctanos</strong> y te ayudamos a llevar <strong>tu área de TI y tu empresa</strong> al siguiente nivel.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Consultores-IT — Evaluación rápida de madurez TI</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
